@@ -5,5 +5,6 @@
 
 int main()
 {
+  std::cout << isDivisible(4, 2);
   return 0;
 }

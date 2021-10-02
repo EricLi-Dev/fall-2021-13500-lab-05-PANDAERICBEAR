@@ -91,7 +91,42 @@ TEST_CASE("isTwinPrime"){
     CHECK(isTwinPrime(3) == true);
     CHECK(isTwinPrime(5) == true);
   }
-  // SUBCASE("Big"){
-  //   CHECK(isTwinPrime())
-  // }
+  SUBCASE("Big"){
+    CHECK(isTwinPrime(821) == true);
+    CHECK(isTwinPrime(523) == true);
+    CHECK(isTwinPrime(57) == false);
+  }
+}
+
+TEST_CASE("nextTwinPrime"){
+  SUBCASE("Base"){
+    CHECK(nextTwinPrime(0) == 3);
+    CHECK(nextTwinPrime(-1) == 3);
+  }
+
+  SUBCASE("Small"){
+    CHECK(nextTwinPrime(3) == 5);
+    CHECK(nextTwinPrime(7) == 11);
+  }
+
+  SUBCASE("Big"){
+    CHECK(nextTwinPrime(59) == 61);
+    CHECK(nextTwinPrime(137) == 139);
+  }
+}
+
+TEST_CASE("largestTwinPrime"){
+  SUBCASE("Base"){
+    CHECK(largestTwinPrime(0, 0) == -1);
+  }
+
+  SUBCASE("Small"){
+    CHECK(largestTwinPrime(5, 18) == 17);
+    CHECK(largestTwinPrime(14, 16) == -1);
+  }
+
+  SUBCASE("Big"){
+    CHECK(largestTwinPrime(1, 31) == 31);
+    CHECK(largestTwinPrime(1, 616) == 599);
+  }
 }
