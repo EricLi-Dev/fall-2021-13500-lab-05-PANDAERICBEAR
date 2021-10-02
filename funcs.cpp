@@ -48,3 +48,11 @@ int nextTwinPrime(int n){
   }
   return 0;
 }
+
+int largestTwinPrime(int a, int b){
+  int counter = b;
+  while((counter > a) && (!isTwinPrime(counter))){
+    counter--;
+  }
+  return isTwinPrime(counter) ? counter : -1;
+}
