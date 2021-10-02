@@ -127,6 +127,6 @@ TEST_CASE("largestTwinPrime"){
 
   SUBCASE("Big"){
     CHECK(largestTwinPrime(1, 31) == 31);
-    CHECK(largestTwinPrime(1, 616) == 599);
+    CHECK(largestTwinPrime(1, 616) == 601);
   }
 }
